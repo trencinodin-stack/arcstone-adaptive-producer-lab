@@ -17,7 +17,6 @@ def main() -> None:
     run_parser = subparsers.add_parser("run")
     run_parser.add_argument("--config", required=True)
     run_parser.add_argument("--dry-run", action="store_true")
-    run_parser.add_argument("--model", default="gpt-5.6")
 
     verify_parser = subparsers.add_parser("verify")
     verify_parser.add_argument("trace")
@@ -43,8 +42,16 @@ def main() -> None:
 
     if producer_type == "adaptive_script":
         producer = AdaptiveScriptProducer(config["request_defaults"])
+
     elif producer_type == "llm":
-        producer = OpenAICompatibleProducer(args.model)
+        model = config["producer"].get("model")
+        if not model:
+            raise ValueError(
+                "LLM producer requires producer.model in the experiment config"
+            )
+
+        producer = OpenAICompatibleProducer(model)
+
     else:
         raise ValueError(
             f"Unsupported producer type: {producer_type!r}"
