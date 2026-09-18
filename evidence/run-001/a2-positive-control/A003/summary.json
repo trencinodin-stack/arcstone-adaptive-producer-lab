@@ -1,0 +1,15 @@
+{
+  "schema": "arcstone-execution-boundary/run-v1",
+  "run_id": "RUN-001-A2-POSITIVE-CONTROL-A003",
+  "request_sha256": "fb03b47e25961d40588ae70ef871f67ad7dba0a437b509d73e4c30b1f6c4828c",
+  "authorization_id": "A2-CONTROL-001",
+  "authorization_state_before": "CONSUMED",
+  "authorization_state_after": "CONSUMED",
+  "decision": "DENY",
+  "deny_reason": "ConsumedAuthorization",
+  "actuation": "NOT_ATTEMPTED",
+  "effect_present_after": true,
+  "effect_sha256_after": "3733cd977ff8eb18b987357e22ced99f46097f31ecb239e878ae63760e83e4d5",
+  "producer_label": "trusted-positive-control-replay",
+  "core_observation": null
+}
