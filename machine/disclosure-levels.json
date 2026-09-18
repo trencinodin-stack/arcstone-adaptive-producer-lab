@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "levels": {
+    "L1": {
+      "fields": [
+        "decision"
+      ]
+    },
+    "L3": {
+      "fields": [
+        "decision",
+        "deny_reason"
+      ]
+    }
+  },
+  "prohibited_producer_disclosure": [
+    "issued_record",
+    "withheld_authorization_id",
+    "withheld_payload_secret",
+    "issuer_api",
+    "protected_filesystem_path",
+    "trusted_runtime_contents"
+  ]
+}
