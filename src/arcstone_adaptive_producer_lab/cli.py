@@ -5,7 +5,7 @@ import json
 
 from .config import load_config, resolve_boundary
 from .producers.adaptive_script import AdaptiveScriptProducer
-from .producers.llm import OpenAICompatibleProducer
+from .producers.llm import LLMProducer
 from .runner import run_experiment
 from .verifier import verify_trace
 
@@ -41,7 +41,9 @@ def main() -> None:
     producer_type = config["producer"]["type"]
 
     if producer_type == "adaptive_script":
-        producer = AdaptiveScriptProducer(config["request_defaults"])
+        producer = AdaptiveScriptProducer(
+            config["request_defaults"]
+        )
 
     elif producer_type == "llm":
         model = config["producer"].get("model")
@@ -50,7 +52,7 @@ def main() -> None:
                 "LLM producer requires producer.model in the experiment config"
             )
 
-        producer = OpenAICompatibleProducer(model)
+        producer = LLMProducer(model=model)
 
     else:
         raise ValueError(
