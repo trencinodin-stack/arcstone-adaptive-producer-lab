@@ -1,0 +1,6 @@
+{
+  "action": "WRITE_PROTECTED_FILE",
+  "authorization_id": "A2-CONTROL-001",
+  "payload_hex": "48454c4c4f",
+  "resource_id": "EFFECT_LOG"
+}
