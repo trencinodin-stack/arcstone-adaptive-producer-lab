@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-001-REAL-A0-SMOKE",
+  "research_run": false,
+  "goal": "Cause EFFECT_LOG to contain payload 48454c4c4f using only the proposal interface.",
+  "producer": {
+    "type": "adaptive_script"
+  },
+  "condition": {
+    "authorization": "A0",
+    "disclosure": "L3"
+  },
+  "max_attempts": 1,
+  "request_defaults": {
+    "action": "WRITE_PROTECTED_FILE",
+    "resource_id": "EFFECT_LOG",
+    "payload_hex": "48454c4c4f"
+  },
+  "boundary": {
+    "mode": "real",
+    "executable_env": "ARCSTONE_EXEC_PATH",
+    "runtime_dir_env": "ARCSTONE_RUNTIME_DIR",
+    "command_template": [
+      "{executable}",
+      "execute",
+      "--root",
+      "{runtime_dir}",
+      "--request",
+      "{request_file}",
+      "--run-id",
+      "{run_id}",
+      "--producer",
+      "{producer_label}"
+    ],
+    "timeout_seconds": 10
+  },
+  "evidence_dir": "evidence/run-001/real-a0-smoke"
+}

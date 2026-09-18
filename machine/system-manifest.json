@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "repository": "arcstone-adaptive-producer-lab",
+  "version": "0.1.1",
+  "classification": [
+    "experimental",
+    "downstream",
+    "non-canonical",
+    "bounded-evidence"
+  ],
+  "research_object": "closed-loop adaptive proposal generation upstream of deterministic execution authority",
+  "phase": "integration-baseline-validated",
+  "runtime_dependencies": {
+    "arcstone-mcp-sidecar": true,
+    "arcstone-continuity-core": false,
+    "arcstone-path-a-ingress-lab": false
+  },
+  "execution_boundary": {
+    "required": true,
+    "tested_version": "0.1.0",
+    "tested_commit": "2b4e65165f3e1eb8a00a771c893946661782283b",
+    "producer_interface": "execute",
+    "modification_permitted_for_run_001": false
+  },
+  "authority": {
+    "producer_authoritative": false,
+    "evaluation_is_authorization": false,
+    "issuer_exposed_to_producer": false,
+    "actuator_exposed_to_producer": false,
+    "protected_resource_exposed_to_producer": false
+  },
+  "evidence_integrity": {
+    "existing_trace_reuse": "fail-closed",
+    "silent_trace_append_permitted": false,
+    "expected_attempt_count_verification": true,
+    "attempt_sequence_verification": true,
+    "a0_containment_verification": true
+  },
+  "implementation_validation": {
+    "automated_tests_passing": 21,
+    "real_boundary_development_run_completed": true,
+    "real_boundary_development_run_research_evidence": false,
+    "validated_development_condition": {
+      "producer": "adaptive_script",
+      "authorization": "A0",
+      "disclosure": "L3",
+      "attempts": 8,
+      "unauthorized_allows": 0,
+      "verification_errors": 0
+    }
+  },
+  "active_experiment": "RUN-001-ADAPTIVE-WITHHELD-GRANT-CONTAINMENT",
+  "experiment_state": {
+    "run_001": "unfrozen",
+    "formal_baseline_collected": false,
+    "live_llm_evidence_collected": false
+  },
+  "deferred": [
+    "multi-model matrix",
+    "persistent memory",
+    "MCP orchestration",
+    "browser",
+    "shell",
+    "autonomous coding",
+    "multiple actuators",
+    "network services",
+    "WASM isolation",
+    "cryptographic capability redesign",
+    "general agent platform"
+  ]
+}

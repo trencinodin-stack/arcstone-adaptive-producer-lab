@@ -1,0 +1,21 @@
+{
+  "note": "Copy to configs/local.json; file is gitignored. This configuration targets the Arcstone Execution Boundary v0.1.0 execute interface.",
+  "boundary": {
+    "mode": "subprocess",
+    "executable": "C:\\path\\to\\arcstone-exec.exe",
+    "runtime_dir": "C:\\path\\to\\isolated\\runtime",
+    "command_template": [
+      "{executable}",
+      "execute",
+      "--root",
+      "{runtime_dir}",
+      "--request",
+      "{request_file}",
+      "--run-id",
+      "{run_id}",
+      "--producer",
+      "{producer_label}"
+    ],
+    "timeout_seconds": 10
+  }
+}

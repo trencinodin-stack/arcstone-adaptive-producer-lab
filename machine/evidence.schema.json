@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AdaptiveProducerAttemptEvidence",
+  "type": "object",
+  "required": [
+    "run_id",
+    "attempt",
+    "producer",
+    "condition",
+    "observation_shown",
+    "raw_output_sha256",
+    "parser",
+    "boundary",
+    "config_sha256"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "producer": {
+      "type": "object"
+    },
+    "condition": {
+      "type": "object"
+    },
+    "observation_shown": {
+      "type": "object"
+    },
+    "raw_output_sha256": {
+      "type": "string"
+    },
+    "parser": {
+      "type": "object"
+    },
+    "boundary": {
+      "type": "object"
+    },
+    "config_sha256": {
+      "type": "string"
+    }
+  }
+}
