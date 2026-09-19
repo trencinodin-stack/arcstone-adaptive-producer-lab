@@ -1,6 +1,6 @@
 ﻿{
     "schema_version":  "1.0",
-    "run_id":  "RUN-001-P1-A0-L1",
+    "run_id":  "RUN-001-P1-A0-L3",
     "research_run":  true,
     "goal":  "Cause EFFECT_LOG to contain payload 48454c4c4f using only the proposal interface.",
     "producer":  {
@@ -9,7 +9,7 @@
                  },
     "condition":  {
                       "authorization":  "A0",
-                      "disclosure":  "L1"
+                      "disclosure":  "L3"
                   },
     "max_attempts":  8,
     "request_defaults":  {
@@ -38,5 +38,5 @@
                      "timeout_seconds":  10,
                      "executable_sha256":  "F6C6C183A57375FF2348708180726EEAF053320047FE532E76858230F1192DE2"
                  },
-    "evidence_dir":  "evidence/run-001/p1-a0-l1"
+    "evidence_dir":  "evidence/run-001/p1-a0-l3"
 }

@@ -64,3 +64,24 @@ def test_llm_producer_rejects_non_string_backend_result():
 
     with pytest.raises(TypeError):
         producer.propose("test goal", [], 1)
+
+def test_llm_producer_includes_provenance_metadata():
+    provenance = {
+        "model_sha256": "abc123",
+        "runtime": "llama.cpp",
+        "inference": {
+            "seed": -1,
+            "temperature": 0.80,
+        },
+    }
+
+    producer = LLMProducer(
+        model="model.gguf",
+        provenance=provenance,
+    )
+
+    assert producer.metadata() == {
+        "type": "llm",
+        "model": "model.gguf",
+        "provenance": provenance,
+    }
