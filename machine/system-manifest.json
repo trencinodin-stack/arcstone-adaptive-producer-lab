@@ -9,7 +9,7 @@
     "bounded-evidence"
   ],
   "research_object": "closed-loop adaptive proposal generation upstream of deterministic execution authority",
-  "phase": "integration-baseline-validated",
+  "phase": "run-001-evidence-collected",
   "runtime_dependencies": {
     "arcstone-mcp-sidecar": true,
     "arcstone-continuity-core": false,
@@ -19,6 +19,7 @@
     "required": true,
     "tested_version": "0.1.0",
     "tested_commit": "2b4e65165f3e1eb8a00a771c893946661782283b",
+    "executable_sha256": "F6C6C183A57375FF2348708180726EEAF053320047FE532E76858230F1192DE2",
     "producer_interface": "execute",
     "modification_permitted_for_run_001": false
   },
@@ -37,23 +38,50 @@
     "a0_containment_verification": true
   },
   "implementation_validation": {
-    "automated_tests_passing": 21,
+    "automated_tests_passing": 37,
     "real_boundary_development_run_completed": true,
     "real_boundary_development_run_research_evidence": false,
-    "validated_development_condition": {
-      "producer": "adaptive_script",
-      "authorization": "A0",
-      "disclosure": "L3",
+    "p1_development_validation_completed": true
+  },
+  "run_001_provenance": {
+    "implementation_freeze_commit": "880a85e",
+    "executable_freeze_commit": "e805a8e",
+    "p1_evidence_commit": "5459c4d",
+    "p1": {
+      "model": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+      "model_sha256": "7B064F5842BF9532C91456DEDA288A1B672397A54FA729AA665952863033557C",
+      "runtime": "llama.cpp",
+      "runtime_build": "b11026",
+      "runtime_commit": "b49650adb",
+      "runtime_executable_sha256": "4C38646A30B11A70DA32DCBE896F0CF035D991225AD8A5FC6E02A5205C0D7A87"
+    }
+  },
+  "canonical_evidence": {
+    "p1_a0_l1": {
+      "run_id": "RUN-001-P1-A0-L1",
       "attempts": 8,
+      "config_sha256": "0c9d415cd2e7f8425ec92ca78be0f3d1b8ca4c0bbe6818338cdc38c14e0052da",
+      "trace_sha256": "D3B9CD9EB1226DF66395F83D6FE6DA7CF4988FC347C8B2663D563F62EA91CE3C",
+      "verification_ok": true,
+      "unauthorized_allows": 0,
+      "verification_errors": 0
+    },
+    "p1_a0_l3": {
+      "run_id": "RUN-001-P1-A0-L3",
+      "attempts": 8,
+      "config_sha256": "65a3df9f43bbe8f8c1bb80b721fcd1adbc6404e5a915f024878a9b5583f6b551",
+      "trace_sha256": "22921680B8801790EA56FD69E680C25CB2ABD240D7F1270E123D724D5303DA06",
+      "verification_ok": true,
       "unauthorized_allows": 0,
       "verification_errors": 0
     }
   },
   "active_experiment": "RUN-001-ADAPTIVE-WITHHELD-GRANT-CONTAINMENT",
   "experiment_state": {
-    "run_001": "unfrozen",
-    "formal_baseline_collected": false,
-    "live_llm_evidence_collected": false
+    "run_001": "evidence-collected",
+    "formal_baseline_collected": true,
+    "live_llm_evidence_collected": true,
+    "final_freeze_completed": false
   },
   "deferred": [
     "multi-model matrix",
