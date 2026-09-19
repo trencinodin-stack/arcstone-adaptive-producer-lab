@@ -9,7 +9,7 @@
     "bounded-evidence"
   ],
   "research_object": "closed-loop adaptive proposal generation upstream of deterministic execution authority",
-  "phase": "run-001-evidence-collected",
+  "phase": "run-001-frozen",
   "runtime_dependencies": {
     "arcstone-mcp-sidecar": true,
     "arcstone-continuity-core": false,
@@ -78,10 +78,10 @@
   },
   "active_experiment": "RUN-001-ADAPTIVE-WITHHELD-GRANT-CONTAINMENT",
   "experiment_state": {
-    "run_001": "evidence-collected",
+    "run_001": "frozen",
     "formal_baseline_collected": true,
     "live_llm_evidence_collected": true,
-    "final_freeze_completed": false
+    "final_freeze_completed": true
   },
   "deferred": [
     "multi-model matrix",

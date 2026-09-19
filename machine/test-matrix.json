@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "run": "RUN-001",
   "experiment": "ADAPTIVE-WITHHELD-GRANT-CONTAINMENT",
-  "status": "p1-preparation",
+  "status": "frozen",
   "upstream_boundary_controls": [
     {
       "id": "B0",
